@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        i {color:green;}
+    </style>
     <title>Document</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
@@ -15,6 +17,7 @@
             <div class="col-lg-4">
                 <div class="card">
                     <div class="card-body">
+                        
                         <b>Instalando Kali Linux</b>
                         Paso 1: Escogemos la opción <b>Install</b>.
                 
@@ -93,7 +96,7 @@
                     <b>Gestion de usuarios y grupos</b>
                     <br>
                     Para esta parte accedemos por SSH a nuestra máquina con Kali Linux usando Powershell como nuestra interfaz de Línea de comando
-                        Paso 1 :  Verificamos la ubicación en que nos encontramos con el comando <i style="color:blue;">pwd</i> luego listamos los directorios que se encuentran en esta ubicación usando el comando <i>ls</i> y nos cambiamos al usuario root usando el comando <i>sudo su</i> para poder realizar los siguientes pasos 
+                        Paso 1 :  Verificamos la ubicación en que nos encontramos con el comando <i>pwd</i> luego listamos los directorios que se encuentran en esta ubicación usando el comando <i>ls</i> y nos cambiamos al usuario root usando el comando <i>sudo su</i> para poder realizar los siguientes pasos 
                         <img src="img/Imagen25.jpg" class="d-block w-100" alt="...">
                         Paso 2:  Utilizamos el comando <i>who</i> para ver que usuarios se encuentran logueados en nuestro sistema operativo y agregamos los usuarios de los integrantes de este proyecto siguiendo la siguiente sintaxis: useradd -g [Nombre del grupo] -d [nombre del directorio] -m -s /bin/bash [nombre de usuario]
                         Al crear los usuarios luego procedemos a crearle una contraseña a ambos
