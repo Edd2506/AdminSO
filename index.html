@@ -112,14 +112,15 @@
                         <img src="img/Imagen29.jpg" class="d-block w-100" alt="...">
                         Paso 6: Para verificar el ID de los grupos utilizamos el comando <i>les /etc/group</i> allí podemos confirmar el ID del grupo de prueba <b>1001</b> y el de kalifinal <b>1000</b>
                         <img src="img/Imagen30.jpg" class="d-block w-100" alt="...">
-                        Paso 7:  en este paso eliminaremos el usuario con nombre usuario_prueba usando el comando deluser [nombre de usuario] y crearemos uno con nombre usuario_nuevo agregándolo al mismo grupo prueba 
+                        Paso 7: En este paso eliminaremos el usuario con nombre <b>usuario_prueba</b> usando el comando <i>deluser [nombre de usuario]</i> y crearemos uno con nombre <b>usuario_nuevo</b> agregándolo al mismo grupo prueba 
                         <img src="img/Imagen31.jpg" class="d-block w-100" alt="...">
-                        Paso 8: Podemos confirmar la eliminación del usuario y la creación del nuevo utilizando nuevamente el comando cat /etc/passwd 
-                        Otra forma de verificar el ID de los usuarios, la grupo que pertenecen y el ID del grupo es usando el comando id [nombre de usuario]
+                        Paso 8: Podemos confirmar la eliminación del usuario y la creación del nuevo utilizando nuevamente el comando <i>cat /etc/passwd</i>
+                        Otra forma de verificar el ID de los usuarios, la grupo que pertenecen y el ID del grupo es usando el comando <i>id [nombre de usuario]</i>
                         <img src="img/Imagen32.jpg" class="d-block w-100" alt="...">
-
-                        Gestion de ficheros y directorio
-        
+                        <br>
+                        <br>
+                        <b>Gestion de ficheros y directorio</b>
+                        <br>
                         Paso 1 : listamos los elementos dentro de la ruta donde nos encontramos y veremos que a pesar de haber eliminado el usuario anteriormente todavía se encuentra su directorio, así que utilizamos el comando rm -r [nombre del directorio] para eliminar el directorio del usuario_nuevo y todos los elementos incluidos en el. Luego listamos nuevamente los elementos para verificar que en efecto se halla eliminado.
                         Luego nos moveremos al directorio del usuario nuevo usando el comando cd [ruta] y crearemos 2 directorios nuevos dentro de este usando el comando mkdir [nombre de directorio]
         
