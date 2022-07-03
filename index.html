@@ -7,7 +7,6 @@
     <style>
         i {color:green;}
         div {background-color: lightgray}
-        div {text-align: center;}
         img {align-self: center;}
         </style>
     <title>Document</title>
@@ -20,7 +19,7 @@
             <div class="col-lg-4">
                 <div class="card" style="width: 55rem;">
                     <div  class="body-card">
-                        <b style="font-size:20px">Universidad Tecnológica de Panamá</b><br>
+                        <b style="font: size 22px;">Universidad Tecnológica de Panamá</b><br>
                         <b>Licenciatura en Redes Informáticas</b><br>
                         <b>Proyecto Final</b><br>
                         <b>Administración de Sistemas Operativos</b><br>
@@ -91,27 +90,26 @@
                         <br>
                         Paso 14: Confirmamos las particiones que se crearan basado en la opción que escogimos anteriormente
                         <img src="img/Imagen17.jpg" class="d-block w-100" -->
-
-                            
+                        <br>                            
                         Por precaución el asistente de instalaciones nos pedirá que confirmemos el formateo del disco y la instalación del esquema de particiones, seleccionamos <b>Yes</b>.
                         <img src="img/Imagen18.jpg" class="d-block w-100" -->
-        
+                        <br>
                         Paso 15: Una vez formateado e instalado las particiones el asistente nos mostrara una serie de herramientas que vienen por defecto en la instalación de Kali, escogeremos las que vienen por defecto para mayor practicidad en esta instalación.
                         <img src="img/Imagen19.jpg" class="d-block w-100" -->
                         Este paso demorara un poco ya que terminara la instalación de los componentes de Kali y las herramientas que escogimos.
-        
+                        <br>
                         Paso 16: Luego el asistente nos dará una notificación para instalar el GRUB boot loader el cual nos ayudara a bootear nuestra sesión de Kali en el futuro
                         <img src="img/Imagen20.jpg" class="d-block w-100" -->
-        
+                        <br>
                         Paso 17:  escogemos donde instalaremos el GRUB boot loader, este lo instalaremos en nuestro disco principal
                         <img src="img/Imagen21.jpg" class="d-block w-100" -->
-        
+                        <br>
                         Paso 18: La instalación ha sido completada así que el asistente de instalación nos confirmara que podemos iniciar nuestra sesión, primero reiniciando 
                         <img src="img/Imagen22.jpg" class="d-block w-100" -->
-        
+                        <br>
                         Una vez reiniciado vemos que contamos con la opción de iniciar Kali Linux y las opciones avanzadas para Kali Linux
                         <img src="img/Imagen23.jpg" class="d-block w-100" -->
-        
+                        <br>
                         Paso 19: Iniciamos sesión en Kali Linux con nuestro usuario kalifinal y la contraseña que configuramos
                         <img src="img/Imagen24.jpg" class="d-block w-100" -->
 
@@ -119,27 +117,40 @@
                     <br>
                     <b>Gestion de usuarios y grupos</b>
                     <br>
-                    Para esta parte accedemos por SSH a nuestra máquina con Kali Linux usando Powershell como nuestra interfaz de Línea de comando
+                    Para esta parte accedemos por SSH a nuestra máquina con Kali Linux usando Powershell como nuestra interfaz de Línea de comando<br>
                         Paso 1 :  Verificamos la ubicación en que nos encontramos con el comando <i>pwd</i> luego listamos los directorios que se encuentran en esta ubicación usando el comando <i>ls</i> y nos cambiamos al usuario root usando el comando <i>sudo su</i> para poder realizar los siguientes pasos 
+                        <br>
                         <img src="img/Imagen25.jpg" class="d-block w-100" -->
-                        Paso 2:  Utilizamos el comando <i>who</i> para ver que usuarios se encuentran logueados en nuestro sistema operativo y agregamos los usuarios de los integrantes de este proyecto siguiendo la siguiente sintaxis: <i>useradd -g [Nombre del grupo] -d [nombre del directorio] -m -s /bin/bash [nombre de usuario]</i>
+                        <br>
+                        Paso 2:  Utilizamos el comando <i>who</i> para ver que usuarios se encuentran logueados en nuestro sistema operativo y agregamos los usuarios de los integrantes de este proyecto siguiendo la siguiente sintaxis: <i>useradd -g [Nombre del grupo] -d [nombre del directorio] -m -s /bin/bash [nombre de usuario]</i><br>
                         Al crear los usuarios luego procedemos a crearle una contraseña a ambos
+                        <br>
                         <img src="img/Imagen26.jpg" class="d-block w-100" -->
-        
-                        Paso 3: Verificamos la creación de los usuarios y sus características usando el comando <i>cat /etc/passwd</i>
+                        <br>
+                        Paso 3: Verificamos la creación de los usuarios y sus características usando el comando <i>cat /etc/passwd</i><br>
                         Aquí podemos observar que los usuarios <b>kalifinal</b>, <b>edgardo</b> y <b>suyeins</b> cuentan con su propio user ID y son parte del mismo group ID: <b>1000</b>
+                        <br>
                         <img src="img/Imagen27.jpg" class="d-block w-100" -->
-        
+                        <br>
                         Paso 4:  Creamos un grupo de prueba utilizando el comando <i>addgroup [nombre de grupo]</i> y luego agregamos un usuario utilizando el comando anteriormente usado y le agregamos una contraseña
+                        <br>
                         <img src="img/Imagen28.jpg" class="d-block w-100" -->
+                        <br>
                         Paso 5: Si lanzamos el comando <i>cat /etc/passwd</i> podremos confirmar que el usuario de prueba con nombre: <b>usuario_prueba</b> fue creado con un <b>ID:1003</b> y es parte del grupo con ID: <b>1001</b> el cual es diferente a los otros usuarios creados anteriormente
+                        <br>
                         <img src="img/Imagen29.jpg" class="d-block w-100" -->
+                        <br>
                         Paso 6: Para verificar el ID de los grupos utilizamos el comando <i>les /etc/group</i> allí podemos confirmar el ID del grupo de prueba <b>1001</b> y el de kalifinal <b>1000</b>
+                        <br>
                         <img src="img/Imagen30.jpg" class="d-block w-100" -->
+                        <br>
                         Paso 7: En este paso eliminaremos el usuario con nombre <b>usuario_prueba</b> usando el comando <i>deluser [nombre de usuario]</i> y crearemos uno con nombre <b>usuario_nuevo</b> agregándolo al mismo grupo prueba 
+                        <br>
                         <img src="img/Imagen31.jpg" class="d-block w-100" -->
-                        Paso 8: Podemos confirmar la eliminación del usuario y la creación del nuevo utilizando nuevamente el comando <i>cat /etc/passwd</i>
+                        <br>
+                        Paso 8: Podemos confirmar la eliminación del usuario y la creación del nuevo utilizando nuevamente el comando <i>cat /etc/passwd</i><br>
                         Otra forma de verificar el ID de los usuarios, la grupo que pertenecen y el ID del grupo es usando el comando <i>id [nombre de usuario]</i>
+                        <br>
                         <img src="img/Imagen32.jpg" class="d-block w-100" -->
                         <br>
                         <br>
