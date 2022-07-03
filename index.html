@@ -98,19 +98,19 @@
                     Para esta parte accedemos por SSH a nuestra máquina con Kali Linux usando Powershell como nuestra interfaz de Línea de comando
                         Paso 1 :  Verificamos la ubicación en que nos encontramos con el comando <i>pwd</i> luego listamos los directorios que se encuentran en esta ubicación usando el comando <i>ls</i> y nos cambiamos al usuario root usando el comando <i>sudo su</i> para poder realizar los siguientes pasos 
                         <img src="img/Imagen25.jpg" class="d-block w-100" alt="...">
-                        Paso 2:  Utilizamos el comando <i>who</i> para ver que usuarios se encuentran logueados en nuestro sistema operativo y agregamos los usuarios de los integrantes de este proyecto siguiendo la siguiente sintaxis: useradd -g [Nombre del grupo] -d [nombre del directorio] -m -s /bin/bash [nombre de usuario]
+                        Paso 2:  Utilizamos el comando <i>who</i> para ver que usuarios se encuentran logueados en nuestro sistema operativo y agregamos los usuarios de los integrantes de este proyecto siguiendo la siguiente sintaxis: <i>useradd -g [Nombre del grupo] -d [nombre del directorio] -m -s /bin/bash [nombre de usuario]</i>
                         Al crear los usuarios luego procedemos a crearle una contraseña a ambos
                         <img src="img/Imagen26.jpg" class="d-block w-100" alt="...">
         
-                        Paso 3: Verificamos la creación de los usuarios y sus características usando el comando cat /etc/passwd
-                        Aquí podemos observar que los usuarios kalifinal, edagrdo y Suyeins cuentan con su propio user ID y son parte del mismo group ID: 1000 
+                        Paso 3: Verificamos la creación de los usuarios y sus características usando el comando <i>cat /etc/passwd</i>
+                        Aquí podemos observar que los usuarios <b>kalifinal</b>, <b>edagrdo</b> y <b>suyeins</b> cuentan con su propio user ID y son parte del mismo group ID: <b>1000</b>
                         <img src="img/Imagen27.jpg" class="d-block w-100" alt="...">
         
-                        Paso 4:  Creamos un grupo de prueba utilizando el comando addgroup [nombre de grupo] y luego agregamos un usuario utilizando el comando anteriormente usado y le agregamos una contraseña
+                        Paso 4:  Creamos un grupo de prueba utilizando el comando <i>addgroup [nombre de grupo]</i> y luego agregamos un usuario utilizando el comando anteriormente usado y le agregamos una contraseña
                         <img src="img/Imagen28.jpg" class="d-block w-100" alt="...">
-                        Paso 5: Si lanzamos el comando cat /etc/passwd podremos confirmar que el usuario de prueba con nombre: usuario_prueba fue creado con un ID:1003 y es parte del grupo con ID: 1001 el cual es diferente a los otros usuarios creados anteriormente
+                        Paso 5: Si lanzamos el comando <i>cat /etc/passwd</i> podremos confirmar que el usuario de prueba con nombre: <b>usuario_prueba</b> fue creado con un <b>ID:1003</b> y es parte del grupo con ID: <b>1001</b> el cual es diferente a los otros usuarios creados anteriormente
                         <img src="img/Imagen29.jpg" class="d-block w-100" alt="...">
-                        Paso 6: Para verificar el ID de los grupos utilizamos el comando les /etc/group allí podemos confirmar el ID del grupo de prueba 1001 y el de kalifinal 1000
+                        Paso 6: Para verificar el ID de los grupos utilizamos el comando <i>les /etc/group</i> allí podemos confirmar el ID del grupo de prueba <b>1001</b> y el de kalifinal <b>1000</b>
                         <img src="img/Imagen30.jpg" class="d-block w-100" alt="...">
                         Paso 7:  en este paso eliminaremos el usuario con nombre usuario_prueba usando el comando deluser [nombre de usuario] y crearemos uno con nombre usuario_nuevo agregándolo al mismo grupo prueba 
                         <img src="img/Imagen31.jpg" class="d-block w-100" alt="...">
