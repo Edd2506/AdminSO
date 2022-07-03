@@ -103,7 +103,7 @@
                         <img src="img/Imagen26.jpg" class="d-block w-100" alt="...">
         
                         Paso 3: Verificamos la creación de los usuarios y sus características usando el comando <i>cat /etc/passwd</i>
-                        Aquí podemos observar que los usuarios <b>kalifinal</b>, <b>edagrdo</b> y <b>suyeins</b> cuentan con su propio user ID y son parte del mismo group ID: <b>1000</b>
+                        Aquí podemos observar que los usuarios <b>kalifinal</b>, <b>edgardo</b> y <b>suyeins</b> cuentan con su propio user ID y son parte del mismo group ID: <b>1000</b>
                         <img src="img/Imagen27.jpg" class="d-block w-100" alt="...">
         
                         Paso 4:  Creamos un grupo de prueba utilizando el comando <i>addgroup [nombre de grupo]</i> y luego agregamos un usuario utilizando el comando anteriormente usado y le agregamos una contraseña
@@ -121,24 +121,26 @@
                         <br>
                         <b>Gestion de ficheros y directorio</b>
                         <br>
-                        Paso 1 : listamos los elementos dentro de la ruta donde nos encontramos y veremos que a pesar de haber eliminado el usuario anteriormente todavía se encuentra su directorio, así que utilizamos el comando rm -r [nombre del directorio] para eliminar el directorio del usuario_nuevo y todos los elementos incluidos en el. Luego listamos nuevamente los elementos para verificar que en efecto se halla eliminado.
-                        Luego nos moveremos al directorio del usuario nuevo usando el comando cd [ruta] y crearemos 2 directorios nuevos dentro de este usando el comando mkdir [nombre de directorio]
-        
-                        Paso 2:  Nos movemos al nuevo directorio creado con nombre Carpeta_nueva y creamos un fichero usando el comando nano [nombre del fichero] , esto nos abrirá un editor de texto para y una vez cerrado el editor de texto el fichero se habrá creado.
-        
+                        Paso 1 : listamos los elementos dentro de la ruta donde nos encontramos y veremos que a pesar de haber eliminado el usuario anteriormente todavía se encuentra su directorio, así que utilizamos el comando <i>rm -r [nombre del directorio]</i> para eliminar el directorio del <b>usuario_nuevo</b> y todos los elementos incluidos en el. Luego listamos nuevamente los elementos para verificar que en efecto se halla eliminado.
+                        Luego nos moveremos al directorio del usuario nuevo usando el comando <i>cd [ruta]</i> y crearemos 2 directorios nuevos dentro de este usando el comando <i>mkdir [nombre de directorio]</i>
+                        <img src="img/Imagen33.jpg" class="d-block w-100" alt="...">
+                        Paso 2:  Nos movemos al nuevo directorio creado con nombre <b>Carpeta_nueva</b> y creamos un fichero usando el comando <i>nano [nombre del fichero]</i> , esto nos abrirá un editor de texto y una vez cerrado el editor de texto el fichero se habrá creado.
+                        <img src="img/Imagen34.jpg" class="d-block w-100" alt="...">
                         Paso 3:  Dentro del fichero agregamos las siguientes líneas:
-                        #Prueba
+                        <i>#Prueba
                         echo $HOME
                         echo $hostname
                         pwd
-        
+                        </i>
+                        <img src="img/Imagen35.jpg" class="d-block w-100" alt="...">
                         Paso 4:  al listar los elementos del directorio actural podemos apreciar el fichero luego creamos un directorio nuevo usando el comando mkdir[nombre del directorio] con nombre Carpeta_nueva1 y al listar nuevamente usando el comando ls vemos ahora el fichero y el nuevo directorio
                         Luego movemos el fichero al nuevo directorio creado usando el comando mv [nombre del fichero] [ruta a moverse] y si nos movemos al nuevo directorio podremos ver el fichero dentro y no en su antigua ubicación.
-        
+                        <img src="img/Imagen36.jpg" class="d-block w-100" alt="...">
                         Paso 5:  Si usamos el comando ls -l podremos ver los permisos con los que cuentan los elementos dentro del directorio, en este caso el fichero solo cuenta con permisos de lectura (r) y escritura(x) para nuestro usuario así que usando el comando chmod [nivel de permisos a asignar] en este caso 777 le otorgamos todos los permisos al usuario actual, el grupo y los otros usuarios. 
                         Al lanzar el comando ls -l podremos ver como todos los permisos fueron agregados y usando el comando ./[nombre del fichero a ejecutar] podemos ejecutar el pequeño script que realizamos anteriormente
-        
+                        <img src="img/Imagen37.jpg" class="d-block w-100" alt="...">
                         Paso 6: luego eliminaremos el fichero usando el comando rm [nombre de fichero] nos movemos un par de niveles atrás usando el comando .. y eliminamos el directorio Carpeta_nueva usando el comando rm -r [nombre de directorio] para así eliminar el directorio y todas las subcarpetas que se encuentren dentro
+                        <img src="img/Imagen38.jpg" class="d-block w-100" alt="...">
                     </div>
                     </div>
             </div>
