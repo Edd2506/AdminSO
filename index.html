@@ -90,22 +90,12 @@
 
                     <br>
                     <br>
-                    <br>
                     <b>Gestion de usuarios y grupos</b>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body">       
-                        Gestion de usuarios y grupos
-
-                        
-        
-                        Para esta parte accedemos por SSH a nuestra maquina con Kali Linux usando Powershell como nuestra interfaz de Línea de comando
-                        Paso 1 :  Verificamos la ubicación en que nos encontramos con el comando pwd luego listamos los directorios que se encuentran en esta ubicación usando el comando ls y nos cambiamos al usuario root usando el comando sudo su para poder realizar los siguientes pasos 
-        
-                        Paso 2:  Utilizamos el comando who para ver que usuarios se encuentran logueados en nuestro sistema operativo y agregamos los usuarios de los integrantes de este proyecto siguiendo la siguiente sintaxis: useradd -g [Nombre del grupo] -d [nombre del directorio] -m -s /bin/bash [nombre de usuario]
+                    <br>
+                    Para esta parte accedemos por SSH a nuestra máquina con Kali Linux usando Powershell como nuestra interfaz de Línea de comando
+                        Paso 1 :  Verificamos la ubicación en que nos encontramos con el comando <i>pwd</i> luego listamos los directorios que se encuentran en esta ubicación usando el comando <i>ls</i> y nos cambiamos al usuario root usando el comando <i>sudo su</i> para poder realizar los siguientes pasos 
+                        <img src="img/Imagen25.jpg" class="d-block w-100" alt="...">
+                        Paso 2:  Utilizamos el comando <i>who</i> para ver que usuarios se encuentran logueados en nuestro sistema operativo y agregamos los usuarios de los integrantes de este proyecto siguiendo la siguiente sintaxis: useradd -g [Nombre del grupo] -d [nombre del directorio] -m -s /bin/bash [nombre de usuario]
                         Al crear los usuarios luego procedemos a crearle una contraseña a ambos
         
                         Paso 3: Verificamos la creación de los usuarios y sus características usando el comando cat /etc/passwd
@@ -121,6 +111,17 @@
         
                         Paso 8: Podemos confirmar la eliminación del usuario y la creación del nuevo utilizando nuevamente el comando cat /etc/passwd 
                         Otra forma de verificar el ID de los usuarios, la grupo que pertenecen y el ID del grupo es usando el comando id [nombre de usuario]
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">       
+                        
+
+                        
+        
+                        
                     </div>
                   </div>
             </div>
