@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid mt-4">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        Instalando Kali Linux
+                        Paso 1: Escogemos la opción Install.
+                
+                        <img src="img/Imagen1.jpg" class="d-block w-100" alt="...">
+                        
+                        esto iniciara un proceso de instalación el cual no importa que brinde la siguiente notificación
+
+                        <img src="img/Imagen2.jpg" class="d-block w-100" alt="...">
+        
+                        Paso 2: Luego veremos el asistente de instalación y seleccionamos el idioma que queremos utilizar para el proceso de instalación
+        
+                        Paso 3: Luego escogemos el país en donde nos encontramos, por motivos de facilidad para esta guía escogimos Estados Unidos
+                        <img src="img/Imagen3.jpg" class="d-block w-100" alt="...">
+        
+                        Paso 4: Luego escogemos el idioma del teclado que vamos a utilizar en nuestro sistema operativo
+                        <img src="img/Imagen4.jpg" class="d-block w-100" alt="...">
+        
+                        Veremos que unos componentes adicionales se irán cargando e instalando entre ellos la configuración de red, las librerías del sistema operativo, procesos de booteo y demás.
+                        <img src="img/Imagen5.jpg" class="d-block w-100" alt="...">
+        
+                        Paso 5: Ingresamos el nombre del equipo para esta ocasión colocamos el nombre de KaliFinal
+                        <img src="img/Imagen6.jpg" class="d-block w-100" alt="...">
+        
+                        Paso 6: El instalador nos pide un nombre de dominio, pero al no tener un dominio en específico lo dejamos en blanco
+                        <img src="img/Imagen7.jpg" class="d-block w-100" alt="...">
+        
+                        Paso 7: Ingresamos el nombre el usuario que configuraremos por primera vez, en esta ocasión colocamos el mismo nombre que el hostname KaliFinal
+                        <img src="img/Imagen8.jpg" class="d-block w-100" alt="...">
+        
+                        Paso 8: el asistente nos pide el username que vamos a utilizar para loguearnos en nuestro usuario el cual sería kalifinal
+        
+                        Paso 9: el asistente de instalación nos pide crear una contraseña y luego confirmarla
+        
+                        Paso 10: Escogemos la zona horaria en la que queremos configurar el sistema operativo 
+        
+                        Paso 11: el asistente nos pedirá el método de partición que queremos escoger, en esta ocasión escogeremos la guiada
+        
+                        Paso 12: escogemos el disco que utilizaremos para la instalar la partición, solo contamos con una al utilizar una máquina virtual
+        
+                        Paso 13: Confirmamos el disco y el esquema de partición que vamos a utilizar el cual es todos los archivos en una partición
+        
+                        Paso 14: Confirmamos las particiones que se crearan basado en la opción que escogimos anteriormente
+        
+                        Por precaución el asistente de instalaciones nos pedirá que confirmemos el formateo del disco y la instalación del esquema de particiones, seleccionamos Yes.
+        
+                        Paso 15: Una vez formateado e instalado las particiones el asistente nos mostrara una serie de herramientas que vienen por defecto en la instalación de Kali, escogeremos las que vienen por defecto para mayor practicidad en esta instalación.
+                                
+                        Este paso demorara un poco ya que terminara la instalación de los componentes de Kali y las herramientas que escogimos.
+        
+                        Paso 16: Luego el asistente nos dará una notificación para instalar el GRUB boot loader el cual nos ayudara a bootear nuestra sesión de  Kali en el futuro
+        
+                        Paso 17:  escogemos donde instalaremos el GRUB boot loader, este lo instalaremos en nuestro disco principal
+        
+                        Paso 18: La instalación ha sido completada así que el asistente de instalación nos confirmara que podemos iniciar nuestra sesión, primero reiniciando 
+        
+                        Una vez reiniciado vemos que contamos con la opción de iniciar Kali Linux y las opciones avanzadas para Kali Linux
+        
+                        Paso 19: Iniciamos sesión en Kali Linux con nuestro usuario kalifinal y la contraseña que configuramos
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">       
+                        Gestion de usuarios y grupos
+        
+                        Para esta parte accedemos por SSH a nuestra maquina con Kali Linux usando Powershell como nuestra interfaz de Línea de comando
+                        Paso 1 :  Verificamos la ubicación en que nos encontramos con el comando pwd luego listamos los directorios que se encuentran en esta ubicación usando el comando ls y nos cambiamos al usuario root usando el comando sudo su para poder realizar los siguientes pasos 
+        
+                        Paso 2:  Utilizamos el comando who para ver que usuarios se encuentran logueados en nuestro sistema operativo y agregamos los usuarios de los integrantes de este proyecto siguiendo la siguiente sintaxis: useradd -g [Nombre del grupo] -d [nombre del directorio] -m -s /bin/bash [nombre de usuario]
+                        Al crear los usuarios luego procedemos a crearle una contraseña a ambos
+        
+                        Paso 3: Verificamos la creación de los usuarios y sus características usando el comando cat /etc/passwd
+                        Aquí podemos observar que los usuarios kalifinal, edagrdo y Suyeins cuentan con su propio user ID y son parte del mismo group ID: 1000 
+        
+                        Paso 4:  Creamos un grupo de prueba utilizando el comando addgroup [nombre de grupo] y luego agregamos un usuario utilizando el comando anteriormente usado y le agregamos una contraseña
+        
+                        Paso 5: Si lanzamos el comando cat /etc/passwd podremos confirmar que el usuario de prueba con nombre: usuario_prueba fue creado con un ID:1003 y es parte del grupo con ID: 1001 el cual es diferente a los otros usuarios creados anteriormente
+        
+                        Paso 6: Para verificar el ID de los grupos utilizamos el comando les /etc/group allí podemos confirmar el ID del grupo de prueba 1001 y el de kalifinal 1000
+        
+                        Paso 7:  en este paso eliminaremos el usuario con nombre usuario_prueba usando el comando deluser [nombre de usuario] y crearemos uno con nombre usuario_nuevo agregándolo al mismo grupo prueba 
+        
+                        Paso 8: Podemos confirmar la eliminación del usuario y la creación del nuevo utilizando nuevamente el comando cat /etc/passwd 
+                        Otra forma de verificar el ID de los usuarios, la grupo que pertenecen y el ID del grupo es usando el comando id [nombre de usuario]
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">        
+                        Gestion de ficheros y directorio
+        
+                        Paso 1 : listamos los elementos dentro de la ruta donde nos encontramos y veremos que a pesar de haber eliminado el usuario anteriormente todavía se encuentra su directorio, así que utilizamos el comando rm -r [nombre del directorio] para eliminar el directorio del usuario_nuevo y todos los elementos incluidos en el. Luego listamos nuevamente los elementos para verificar que en efecto se halla eliminado.
+                        Luego nos moveremos al directorio del usuario nuevo usando el comando cd [ruta] y crearemos 2 directorios nuevos dentro de este usando el comando mkdir [nombre de directorio]
+        
+                        Paso 2:  Nos movemos al nuevo directorio creado con nombre Carpeta_nueva y creamos un fichero usando el comando nano [nombre del fichero] , esto nos abrirá un editor de texto para y una vez cerrado el editor de texto el fichero se habrá creado.
+        
+                        Paso 3:  Dentro del fichero agregamos las siguientes líneas:
+                        #Prueba
+                        echo $HOME
+                        echo $hostname
+                        pwd
+        
+                        Paso 4:  al listar los elementos del directorio actural podemos apreciar el fichero luego creamos un directorio nuevo usando el comando mkdir[nombre del directorio] con nombre Carpeta_nueva1 y al listar nuevamente usando el comando ls vemos ahora el fichero y el nuevo directorio
+                        Luego movemos el fichero al nuevo directorio creado usando el comando mv [nombre del fichero] [ruta a moverse] y si nos movemos al nuevo directorio podremos ver el fichero dentro y no en su antigua ubicación.
+        
+                        Paso 5:  Si usamos el comando ls -l podremos ver los permisos con los que cuentan los elementos dentro del directorio, en este caso el fichero solo cuenta con permisos de lectura (r) y escritura(x) para nuestro usuario así que usando el comando chmod [nivel de permisos a asignar] en este caso 777 le otorgamos todos los permisos al usuario actual, el grupo y los otros usuarios. 
+                        Al lanzar el comando ls -l podremos ver como todos los permisos fueron agregados y usando el comando ./[nombre del fichero a ejecutar] podemos ejecutar el pequeño script que realizamos anteriormente
+        
+                        Paso 6: luego eliminaremos el fichero usando el comando rm [nombre de fichero] nos movemos un par de niveles atrás usando el comando .. y eliminamos el directorio Carpeta_nueva usando el comando rm -r [nombre de directorio] para así eliminar el directorio y todas las subcarpetas que se encuentren dentro
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>
